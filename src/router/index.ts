@@ -14,10 +14,29 @@ import Information from '@/components/hotel/Information.vue'
 import Connexion from '@/views/etablissement/Connexion.vue'
 import MotDePasse from '@/views/etablissement/MotDePasse.vue'
 import Hebergement from '@/views/etablissement/Hebergement.vue'
+import Appartement from '@/views/etablissement/Appartement.vue'
+import ChoixAppartements from '@/views/etablissement/ChoixAppartements.vue'
+import LeChoix from '@/views/etablissement/LeChoix.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    // 🟢 Layout principal
+    {
+      path: '/',
+      component: Layout,
+      children: [
+        { path: '', name: 'home', component: Home },
+        { path: 'hotel', name: 'hotel', component: Hotel },
+        { path: 'otp', name: 'otp', component: OtpModal },
+        { path: 'activites', name: 'activites', component: Activites },
+        { path: 'inscription', name: 'inscription', component: Inscription },
+        { path: 'contacts', name: 'contacts', component: Contacts },
+        { path: 'connexion', name: 'connexion', component: Connexion },
+
+        { path: 'hotel/:id', name: 'hotel-detail', component: HotelDetail },
+      ]
+    },
 
     // 🔵 Layout2 pour Information
     {
@@ -51,26 +70,26 @@ const router = createRouter({
           path: 'hebergement',
           name: 'hebergement',
           component: Hebergement
+        },
+        {
+          path: 'appartement',
+          name: 'appartement',
+          component: Appartement
+        },
+        {
+          path: 'choix-appartements',
+          name: 'choix-appartements',
+          component: ChoixAppartements
+        },
+        {
+          path: 'le-choix',
+          name: 'le-choix',
+          component: LeChoix
         }
       ]
     },
 
-    // 🟢 Layout principal
-    {
-      path: '/',
-      component: Layout,
-      children: [
-        { path: '', name: 'home', component: Home },
-        { path: 'hotel', name: 'hotel', component: Hotel },
-        { path: 'otp', name: 'otp', component: OtpModal },
-        { path: 'activites', name: 'activites', component: Activites },
-        { path: 'inscription', name: 'inscription', component: Inscription },
-        { path: 'contacts', name: 'contacts', component: Contacts },
-        { path: 'connexion', name: 'connexion', component: Connexion },
 
-        { path: 'hotel/:id', name: 'hotel-detail', component: HotelDetail },
-      ]
-    }
   ]
 })
 

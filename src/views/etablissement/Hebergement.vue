@@ -18,12 +18,9 @@
         :key="index"
         class="border border-gray-200 rounded-2xl p-8 flex flex-col items-center text-center hover:shadow-lg transition-shadow bg-white"
       >
-        <!-- Icône (Remplace par tes Boxicons au besoin) -->
+        <!-- Icône Boxicons -->
         <div class="mb-6">
-          <div class="text-6xl text-zinc-900">
-            <!-- Exemple Boxicons: <i :class="item.icon"></i> -->
-            {{ item.emoji }}
-          </div>
+          <i :class="item.icon" class="text-6xl text-zinc-900"></i>
         </div>
 
         <h3 class="text-lg font-bold mb-3 min-h-[56px] flex items-center">
@@ -35,21 +32,13 @@
         </p>
 
         <router-link
-          :to="item.path"
+          to="/etablissement/appartement"
           class="w-full bg-[#1a1a1a] text-white text-[13px] font-bold py-3 rounded-xl hover:bg-zinc-800 transition-colors"
         >
           Inscrivez l'établissement
         </router-link>
       </div>
     </div>
-
-    <!-- Footer -->
-    <footer class="w-full max-w-4xl border-t border-gray-100 pt-8 text-center">
-      <p class="text-gray-400 text-[11px] leading-relaxed">
-        DOR.com, le leader africain des voyages en ligne et services associés.<br>
-        Copyright © 2026 DOR.com™. Tous droits réservés.
-      </p>
-    </footer>
 
   </div>
 </template>
@@ -58,28 +47,24 @@
 const categories = [
   {
     title: 'Appartements',
-    emoji: '🏠',
-    icon: 'bx bx-home-alt', // Pour tes Boxicons
+    icon: 'bx bx-home-alt',
     description: 'Hébergement meublé avec cuisine que les clients peuvent louer intégralement',
     path: '/register/apartment'
   },
   {
     title: 'Maisons',
-    emoji: '🏘️',
     icon: 'bx bx-building-house',
     description: 'Hébergements s\'apparentant à des appartements, des maisons de vacances, des villas, etc.',
     path: '/register/house'
   },
   {
     title: 'Hôtels, chambres d\'hôtes et bien plus',
-    emoji: '🏨',
     icon: 'bx bx-hotel',
     description: 'Hébergement meublé avec cuisine que les clients peuvent louer intégralement',
     path: '/register/hotel'
   },
   {
     title: 'Autres hébergements',
-    emoji: '🏕️',
     icon: 'bx bx-landscape',
     description: 'Hébergements s\'apparentant à des bateaux, des campings, des tentes de luxe, etc.',
     path: '/register/others'
