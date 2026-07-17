@@ -37,11 +37,8 @@
 
             <div class="flex items-center justify-center gap-3 mt-2">
               <div class="h-px w-12 bg-gray-300"></div>
-
-              <span
-                class="text-xs uppercase tracking-[0.4em] text-gray-500"
-              >
-                Site Touristique
+              <span class="text-sm font-medium text-gray-500">
+                Gestion d'hôtel
               </span>
 
               <div class="h-px w-12 bg-gray-300"></div>
