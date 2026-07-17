@@ -6,7 +6,7 @@
       <h1 class="text-3xl font-bold text-gray-800 mb-2">Appartements</h1>
       <p class="text-gray-600 mb-8 text-lg">Combien d'appartements allez vous inscrire?</p>
 
-      <router-link to="/register" class="flex items-center text-gray-700 hover:text-black transition-colors mb-6 group">
+      <router-link to="/etablissement/hebergement" class="flex items-center text-gray-700 hover:text-black transition-colors mb-6 group">
         <i class='bx bx-chevron-left text-2xl'></i>
         <span class="text-sm font-medium">Retour</span>
       </router-link>

@@ -5,9 +5,9 @@
       <h1 class="text-3xl font-bold mb-2">Appartements</h1>
       <p class="text-lg mb-6">Où avez-vous inscrit votre hébergement ?</p>
 
-      <button class="flex items-center text-sm text-gray-600 mb-8 hover:underline">
+      <router-link to="/etablissement/choix-appartements" class="flex items-center text-sm text-gray-600 mb-8 hover:underline">
         <span class="mr-2">‹</span> Retour
-      </button>
+      </router-link>
 
       <div class="bg-white border border-gray-200 rounded-xl p-8 shadow-sm mb-6">
         <p class="text-[15px] leading-relaxed mb-8">
@@ -45,7 +45,7 @@
       </div>
 
       <RouterLink
-        to="/etape-suivante"
+        to="/etablissement/ajout-lien"
         class="block w-full bg-[#262626] text-white text-center py-4 rounded-lg font-semibold hover:bg-black transition-colors"
       >
         Suivant

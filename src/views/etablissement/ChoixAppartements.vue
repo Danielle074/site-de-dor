@@ -5,10 +5,10 @@
       <h1 class="text-3xl font-bold mb-2">Appartements</h1>
       <p class="text-gray-600 mb-6 text-lg">Combien d’appartements allez vous inscrire?</p>
 
-      <button class="flex items-center text-gray-700 hover:text-black mb-6 transition-all">
+      <router-link to="/etablissement/appartement" class="flex items-center text-gray-700 hover:text-black mb-6 transition-all">
         <i class='bx bx-chevron-left text-2xl'></i>
         <span class="text-sm font-medium">Retour</span>
-      </button>
+      </router-link>
 
       <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm space-y-6 mb-8">
 
