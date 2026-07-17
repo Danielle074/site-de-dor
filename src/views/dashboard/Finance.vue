@@ -80,7 +80,7 @@
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-50">
-            <tr v-for="row in financeData" :key="row.id" class="hover:bg-gray-50/40 transition-colors">
+            <tr v-for="row in financeData" :key="row.bookingId" class="hover:bg-gray-50/40 transition-colors">
               <!-- Nom du client -->
               <td class="px-6 py-4 font-bold text-gray-800">{{ row.clientName }}</td>
 

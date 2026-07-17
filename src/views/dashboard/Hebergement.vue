@@ -267,8 +267,9 @@ const rooms = ref<Room[]>([
   }
 ]);
 
-// Chambre sélectionnée par défaut au chargement (La chambre Deluxe comme sur ta capture)
-const selectedRoom = ref<Room>(rooms.value[1]);
+// Chambre sélectionnée par défaut (la Deluxe en index 1).
+// L'opérateur ! assure à TypeScript que la valeur n'est pas undefined.
+const selectedRoom = ref<Room>(rooms.value[1]!);
 
 // Liste statique des Amenities pour le panneau de droite
 const amenities = ref([

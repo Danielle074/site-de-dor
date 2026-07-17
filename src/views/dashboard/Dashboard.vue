@@ -251,10 +251,10 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-// 🛠️ IMPORTATION CRUCIALE : On importe le composant de bibliothèque ApexCharts pour Vue 3
 import apexchart from 'vue3-apexcharts';
+import type { ApexOptions } from 'apexcharts';
 
-// --- CONFIGURATION APEXCHARTS : 2. LA GRANDE COURBE DE REVENUE ---
+// --- CONFIGURATION APEXCHARTS : REVENUE (AREA) ---
 const revenueChartSeries = ref([
   {
     name: 'Total Revenue',
@@ -262,7 +262,7 @@ const revenueChartSeries = ref([
   }
 ]);
 
-const revenueChartOptions = ref({
+const revenueChartOptions = ref<ApexOptions>({
   chart: { type: 'area', toolbar: { show: false }, fontFamily: 'sans-serif' },
   stroke: { curve: 'smooth', width: 2, colors: ['#a3e635'] },
   fill: {
@@ -294,13 +294,13 @@ const revenueChartOptions = ref({
   }
 });
 
-// --- CONFIGURATION APEXCHARTS : 3. GRAPH_BARS (RESERVATIONS) ---
+// --- CONFIGURATION APEXCHARTS : RESERVATIONS (BAR) ---
 const reservationsChartSeries = ref([
   { name: 'Reservé', data: [68, 48, 68, 68, 70, 60, 64] },
   { name: 'Annulé', data: [12, 12, 14, 10, 12, 12, 14] }
 ]);
 
-const reservationsChartOptions = ref({
+const reservationsChartOptions = ref<ApexOptions>({
   chart: { type: 'bar', stacked: true, toolbar: { show: false } },
   colors: ['#d1fae5', '#eab308'],
   plotOptions: { bar: { columnWidth: '35%', borderRadius: 4 } },
@@ -315,9 +315,9 @@ const reservationsChartOptions = ref({
   legend: { show: false }
 });
 
-// --- CONFIGURATION APEXCHARTS : 4. DONUT (PLATEFORME) ---
+// --- CONFIGURATION APEXCHARTS : PLATEFORME (DONUT) ---
 const platformChartSeries = ref([61, 12, 11, 9, 5, 2]);
-const platformChartOptions = ref({
+const platformChartOptions = ref<ApexOptions>({
   chart: { type: 'donut' },
   labels: ['Direct Booking', 'Booking.com', 'Agoda', 'Airbnb', 'Hotels.com', 'Others'],
   colors: ['#a7f3d0', '#6ee7b7', '#facc15', '#fef08a', '#fef9c3', '#e2e8f0'],
